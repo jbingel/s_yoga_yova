@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "s/Yoga/Yova",
+  "description": "Namaste!",
+  "version": "1.0",
+  "icons": {
+    "16": "img/yova16.png",
+    "48": "img/yova48.png",
+    "128": "img/yova.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["scripts/background.js"],
+    "all_frames": true
+  }],
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "content_security_policy":"script-src 'self'; object-src 'self'"
+}
